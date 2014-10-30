@@ -6,6 +6,7 @@ public class ClusterList {
 
     final String name;
     int maximum;
+    boolean allowK;
     boolean allow1;
     boolean allow2;
     boolean allow3;
@@ -35,6 +36,8 @@ public class ClusterList {
 
     public boolean isGradeAllowed(int grade) {
 	switch(grade) {
+	    case 0:
+		return allowK;
 	    case 1:
 		return allow1;
 	    case 2:
